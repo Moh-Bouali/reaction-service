@@ -38,7 +38,7 @@ jobs:
         run: echo "${{ secrets.DOCKERHUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
 
       - name: Push Docker image
-        run: docker push moh96/post-service:${{ github.sha }}
+        run: docker push moh96/reaction-service:${{ github.sha }}
 
     # - name: Deploy to Kubernetes
     #   run: kubectl apply -f kubernetes-deployment.yaml
